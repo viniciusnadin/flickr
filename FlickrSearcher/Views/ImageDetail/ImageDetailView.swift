@@ -52,7 +52,7 @@ struct ImageDetailView: View {
     }
 }
 
-#Preview {
-    SearchView(viewModel: SearchViewModel(repository: SearchRepository()))
-}
+//#Preview {
+//    SearchView(viewModel: SearchViewModel(repository: SearchRepository()))
+//}
 

@@ -11,8 +11,8 @@ import Kingfisher
 struct SearchView: View {
 
     @ObservedObject var viewModel: SearchViewModel
-    private let imageSize = UIScreen.main.bounds.width / 2 - 10
-    private let columns = Array(repeating: GridItem(.flexible()), count: 2)
+    private let imageSize = UIScreen.main.bounds.width / 3 - 1
+    private let columnGrid = Array(repeating: GridItem(.flexible(), spacing: 1), count: 3)
 
     var body: some View {
         NavigationView {
@@ -29,7 +29,7 @@ struct SearchView: View {
                         Spacer()
                     } else {
                         ScrollView {
-                            LazyVGrid(columns: columns) {
+                            LazyVGrid(columns: columnGrid, spacing: 1) {
                                 ForEach(viewModel.images) { image in
                                     NavigationLink(destination: ImageDetailView(viewModel: ImageDetailViewModel(image: image))) {
                                         KFImage(URL(string: image.media.m))
@@ -38,14 +38,13 @@ struct SearchView: View {
                                                 ProgressView()
                                             }
                                             .cancelOnDisappear(true)
-                                            .aspectRatio(contentMode: .fill)
+                                            .scaledToFill()
                                             .frame(width: imageSize, height: imageSize)
                                             .clipped()
-                                            .cornerRadius(10)
                                     }
                                 }
+                                
                             }
-                            .padding(.horizontal, 10)
                         }
                     }
                 }
@@ -53,9 +52,5 @@ struct SearchView: View {
             .navigationBarTitle(viewModel.viewTitle)
         }
     }
-}
-
-#Preview {
-    SearchView(viewModel: SearchViewModel(repository: SearchRepository()))
 }
 
