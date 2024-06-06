@@ -15,7 +15,7 @@ struct SearchView: View {
     private let columnGrid = Array(repeating: GridItem(.flexible(), spacing: 1), count: 3)
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 SearchBar(text: $viewModel.searchText)
                 if viewModel.isLoading {
@@ -31,7 +31,7 @@ struct SearchView: View {
                         ScrollView {
                             LazyVGrid(columns: columnGrid, spacing: 1) {
                                 ForEach(viewModel.images) { image in
-                                    NavigationLink(destination: ImageDetailView(viewModel: ImageDetailViewModel(image: image))) {
+                                    NavigationLink(value: image) {
                                         KFImage(URL(string: image.media.m))
                                             .resizable()
                                             .placeholder {
@@ -43,13 +43,15 @@ struct SearchView: View {
                                             .clipped()
                                     }
                                 }
-                                
                             }
                         }
                     }
                 }
             }
-            .navigationBarTitle(viewModel.viewTitle)
+            .navigationTitle("Search")
+            .navigationDestination(for: ImageObject.self) { image in
+                ImageDetailView(viewModel: ImageDetailViewModel(image: image))
+            }
         }
     }
 }
