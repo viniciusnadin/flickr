@@ -11,7 +11,9 @@ import SwiftUI
 struct FlickrSearcherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let repository = SearchRepository()
+            let viewModel = SearchViewModel(repository: repository)
+            SearchView(viewModel: viewModel)
         }
     }
 }
