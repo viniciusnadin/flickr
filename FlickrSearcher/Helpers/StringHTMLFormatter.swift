@@ -8,19 +8,29 @@
 import Foundation
 
 extension String {
-    func strippingHTML() -> String {
-        guard let data = self.data(using: .utf8) else { return self }
-        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
-            .documentType: NSAttributedString.DocumentType.html,
-            .characterEncoding: String.Encoding.utf8.rawValue
-        ]
-        let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil)
-        return attributedString?.string ?? self
-    }
+    func convertHTMLToAttributedString(completion: @escaping (AttributedString) -> Void) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            guard let data = self.data(using: .utf8) else {
+                DispatchQueue.main.async {
+                    completion(AttributedString())
+                }
+                return
+            }
 
-    func extractFinalPart() -> String {
-        let strippedText = self.strippingHTML()
-        let paragraphs = strippedText.split(separator: "\n").map { String($0) }
-        return paragraphs.last ?? strippedText
+            if let attributedString = try? NSAttributedString(
+                data: data,
+                options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue],
+                documentAttributes: nil) {
+
+                let attributedString = AttributedString(attributedString)
+                DispatchQueue.main.async {
+                    completion(attributedString)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(AttributedString())
+                }
+            }
+        }
     }
 }

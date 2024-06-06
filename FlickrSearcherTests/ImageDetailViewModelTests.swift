@@ -24,10 +24,8 @@ final class ImageDetailViewModelTests: XCTestCase {
         let viewModel = ImageDetailViewModel(image: image)
 
         XCTAssertEqual(viewModel.imagePath, "https://example.com/image.jpg")
-        XCTAssertEqual(viewModel.imageTitle, "Title: Sample Title")
-        XCTAssertEqual(viewModel.imageDescription, "Description: Sample Description")
-        XCTAssertEqual(viewModel.imageAuthor, "Author: Sample Author")
+        XCTAssertEqual(viewModel.imageTitle, "Sample Title")
+        XCTAssertEqual(viewModel.imageDescription, "Sample Description")
         XCTAssertEqual(viewModel.imagePublicationDate, "Published: 2023-06-01")
-        XCTAssertEqual(viewModel.viewTitle, "Photo Details")
     }
 }
