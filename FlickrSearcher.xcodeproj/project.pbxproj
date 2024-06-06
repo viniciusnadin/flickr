@@ -19,6 +19,7 @@
 		D57E55B92C116120000E5317 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55B82C116120000E5317 /* SearchRepository.swift */; };
 		D57E55BB2C116131000E5317 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55BA2C116131000E5317 /* APIResponse.swift */; };
 		D57E55BE2C116167000E5317 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55BD2C116167000E5317 /* DateFormatter.swift */; };
+		D57E55C02C116185000E5317 /* StringHTMLFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55BF2C116185000E5317 /* StringHTMLFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D57E55B82C116120000E5317 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		D57E55BA2C116131000E5317 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		D57E55BD2C116167000E5317 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		D57E55BF2C116185000E5317 /* StringHTMLFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHTMLFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				D57E55BD2C116167000E5317 /* DateFormatter.swift */,
+				D57E55BF2C116185000E5317 /* StringHTMLFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				D57E55B72C1160E7000E5317 /* Image.swift in Sources */,
 				D57E55B92C116120000E5317 /* SearchRepository.swift in Sources */,
 				D57E55BE2C116167000E5317 /* DateFormatter.swift in Sources */,
+				D57E55C02C116185000E5317 /* StringHTMLFormatter.swift in Sources */,
 				D57E55892C116065000E5317 /* FlickrSearcherApp.swift in Sources */,
 				D57E55B42C1160D5000E5317 /* SearchRepositoryProtocol.swift in Sources */,
 				D57E55BB2C116131000E5317 /* APIResponse.swift in Sources */,
