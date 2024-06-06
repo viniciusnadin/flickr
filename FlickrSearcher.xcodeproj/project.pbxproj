@@ -18,6 +18,7 @@
 		D57E55B72C1160E7000E5317 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55B62C1160E7000E5317 /* Image.swift */; };
 		D57E55B92C116120000E5317 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55B82C116120000E5317 /* SearchRepository.swift */; };
 		D57E55BB2C116131000E5317 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55BA2C116131000E5317 /* APIResponse.swift */; };
+		D57E55BE2C116167000E5317 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E55BD2C116167000E5317 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		D57E55B62C1160E7000E5317 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		D57E55B82C116120000E5317 /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
 		D57E55BA2C116131000E5317 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		D57E55BD2C116167000E5317 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		D57E55872C116065000E5317 /* FlickrSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				D57E55BC2C11615D000E5317 /* Helpers */,
 				D57E55B52C1160E1000E5317 /* Models */,
 				D57E55B22C1160C8000E5317 /* Repository */,
 				D57E55882C116065000E5317 /* FlickrSearcherApp.swift */,
@@ -153,6 +156,14 @@
 				D57E55BA2C116131000E5317 /* APIResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D57E55BC2C11615D000E5317 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D57E55BD2C116167000E5317 /* DateFormatter.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				D57E558B2C116065000E5317 /* ContentView.swift in Sources */,
 				D57E55B72C1160E7000E5317 /* Image.swift in Sources */,
 				D57E55B92C116120000E5317 /* SearchRepository.swift in Sources */,
+				D57E55BE2C116167000E5317 /* DateFormatter.swift in Sources */,
 				D57E55892C116065000E5317 /* FlickrSearcherApp.swift in Sources */,
 				D57E55B42C1160D5000E5317 /* SearchRepositoryProtocol.swift in Sources */,
 				D57E55BB2C116131000E5317 /* APIResponse.swift in Sources */,
