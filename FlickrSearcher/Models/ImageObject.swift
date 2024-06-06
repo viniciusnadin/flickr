@@ -1,5 +1,5 @@
 //
-//  Image.swift
+//  ImageObject.swift
 //  FlickrSearcher
 //
 //  Created by Vinicius Nadin on 06/06/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Image: Identifiable, Codable, Hashable {
+public struct ImageObject: Identifiable, Codable, Hashable {
 
     public init(title: String, link: String, media: Media, description: String, published: String, author: String) {
         self.title = title
@@ -38,7 +38,7 @@ public struct Image: Identifiable, Codable, Hashable {
         }
     }
 
-    public static func == (lhs: Image, rhs: Image) -> Bool {
+    public static func == (lhs: ImageObject, rhs: ImageObject) -> Bool {
         lhs.id == rhs.id
     }
 }

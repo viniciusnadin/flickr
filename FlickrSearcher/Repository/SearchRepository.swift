@@ -8,7 +8,7 @@
 import Foundation
 
 class SearchRepository: SearchRepositoryProtocol {
-    func searchImage(_ text: String) async throws -> [Image] {
+    func searchImage(_ text: String) async throws -> [ImageObject] {
         let tags = text.replacingOccurrences(of: " ", with: ",")
         let urlString = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1&tags=\(tags)"
         guard let url = URL(string: urlString) else { throw URLError(.badURL) }

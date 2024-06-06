@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol SearchRepositoryProtocol {
-    func searchImage(_ text: String) async throws -> [Image]
+    func searchImage(_ text: String) async throws -> [ImageObject]
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 struct APIResponse: Codable {
-    var items: [Image]
+    var items: [ImageObject]
 }
